@@ -64,7 +64,7 @@ class GitRepo(object):
         if len(self.repo.refs) > 0:
             return self.repo.head.commit.hexsha
         else:
-            return self.repo.git.show_ref("--head").split(" ")[0]
+            return None
 
     @property
     def branch(self):
